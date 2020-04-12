@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+
+{% extends 'greendurban/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+  <title>GreenDurban.com</title>
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <p class="lead text-muted">Welcome to Green Durban :)</p>
+      <p>
+        <a href="mailto:grndurban20@gmail.com" class="btn btn-primary my-2">Email Me</a>
+      </p>
+      <img class "img-fluid" src="{% static '/greendurban/img/durban.jpg' %}" height=300 width=400/>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
