@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'greendurban/base.html' %}
+{% block content %}
+
+
+<section class="jumbotron text-left">
+	<div class="container">
+<title>Albums</title>
+<article class="post-41 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="title-post entry-title">Albums</h1>	</header><!-- .entry-header -->
+
+<hr />
+
+{% for album in albums.all %}
+{% if album.private == False %}
+<div class="container">
+<hr />
+<br />
+ <a href={{ album.url }}><h3>{{ album.title }}</h3></a>
+   Start: {{ album.start_date_pretty }}
+     //
+   End: {{ album.end_date_pretty }}
+<br />
+{{ album.description }}
+<br />
+</div>
+{% endif %}
+{% endfor %}
+
+<hr />
+</div>
+</section>
+
+
+
+		{% endblock %}

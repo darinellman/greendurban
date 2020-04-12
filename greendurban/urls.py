@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', greendurban.views.home, name='home'),
     #path('blog/', include('blog.urls')),
-    #path('albums/', include('albums.urls')),
+    path('albums/', include('albums.urls')),
     #path('events/', include('events.urls')),
     #path('history/', include('history.urls')),
     #path('spots/', include('spots.urls')),
